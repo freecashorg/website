@@ -6,11 +6,13 @@
     position: relative;
     background: url('../images/dot.gif') left 45px repeat-x;
 }
+
 #dates {
     width: 1200px;
     height: 60px;
     overflow: hidden;
 }
+
 #dates li {
     list-style: none;
     float: left;
@@ -20,10 +22,12 @@
     text-align: center;
     background: url('../images/biggerdot.png') center bottom no-repeat;
 }
+
 #dates a {
     line-height: 38px;
     padding-bottom: 10px;
 }
+
 #dates .selected {
     font-size: 38px;
 }
@@ -35,23 +39,27 @@
     margin-top: 50px;
     overflow: hidden;
 }
+
 #issues li {
     width: 1200px;
     height: 350px;
     list-style: none;
     float: left;
 }
+
 #issues li img {
     float: left;
     margin: 10px 30px 10px 50px;
     visibility: hidden;
 }
+
 #issues li h1 {
     color: #ffcc00;
     font-size: 48px;
     margin: 20px 0;
     text-shadow: #000 1px 1px 2px;
 }
+
 #issues li p {
     font-size: 18px;
     padding: 20px 70px;
@@ -67,10 +75,12 @@
     position: absolute;
     top: 0;
 }
+
 #grad_left {
     left: 0;
 
 }
+
 #grad_right {
     right: 0;
 
@@ -87,14 +97,17 @@
     background-position: 0 0;
     background-repeat: no-repeat;
 }
+
 #next {
     right: 0;
     top: 270px;
 }
+
 #prev {
     left: 0;
     top: 270px;
 }
+
 #next.disabled,
 #prev.disabled {
     opacity: 0.2;
