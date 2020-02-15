@@ -1,114 +1,116 @@
+.container{width: 1200px; height: 400px;overflow: hidden;margin:0 auto;position: relative;}
+.conthird{
+    position: absolute;
+    left: 531px;
+    bottom: 0;
+    width: 0;
+    height: 0;
+    border-style: solid;
+    border-width: 10px 10px 0 10px;
+    border-color: #0187aa transparent transparent transparent;
+}
 #timeline {
-    width: 1200px;
-    height: 350px;
-    overflow: hidden;
-    margin: 0px auto;
+    width: 1300px;
+    height: 420px;
+    overflow: scroll;
     position: relative;
-    background: url('../images/dot.gif') left 45px repeat-x;
 }
-
-#dates {
-    width: 1200px;
-    height: 60px;
-    overflow: hidden;
+.container ul{border-left: 2px #0187aa solid; list-style:none;margin-left: 540px;}
+.container ul li{
+    width: 340px;
+    min-height: 36px;
+    background-color: rgba(255, 255, 255, 0.2);
+    border: solid 1px #0187aa;
+    padding: 14px;
+    border-radius: 6px;
+    box-shadow: 0 0 4px rgba(0, 0, 0, 0.12), 0 2px 2px rgba(0, 0, 0, 0.08);
+    margin-top: 60px;
+    margin-left: 30px;
+    position: relative;
 }
-
-#dates li {
-    list-style: none;
-    float: left;
-    width: 200px;
-    height: 50px;
-    font-size: 24px;
-    text-align: center;
-    background: url('../images/biggerdot.png') center bottom no-repeat;
+.container ul li.left{
+    margin-left: -400px;
 }
-
-#dates a {
-    line-height: 38px;
-    padding-bottom: 10px;
-}
-
-#dates .selected {
-    font-size: 38px;
-}
-
-#issues {
-    width: 1200px;
-    height: 350px;
-    padding-top: 0;
-    margin-top: 50px;
-    overflow: hidden;
-}
-
-#issues li {
-    width: 1200px;
-    height: 350px;
-    list-style: none;
-    float: left;
-}
-
-#issues li img {
-    float: left;
-    margin: 10px 30px 10px 50px;
-    visibility: hidden;
-}
-
-#issues li h1 {
-    color: #ffcc00;
-    font-size: 48px;
-    margin: 20px 0;
-    text-shadow: #000 1px 1px 2px;
-}
-
-#issues li p {
-    font-size: 18px;
-    padding: 20px 70px;
-    font-weight: normal;
-    line-height: 32px;
-    text-indent: 36px;
-}
-
-#grad_left,
-#grad_right {
-    width: 100px;
-    height: 350px;
+.container ul li:after,
+.container ul li:before{
+    content: "";
     position: absolute;
-    top: 0;
+    width: 0;
+    height: 0;
+    border: 8px solid transparent;
+}
+.container ul li.right:after,
+.container ul li.right:before {
+    border-right-color: #0187aa;
+    top: 10px;
+    left: -16px;
 }
 
-#grad_left {
-    left: 0;
-
+.container ul li.right:after {
+    border-right-color: #fff;
+    left: -14px;
 }
-
-#grad_right {
-    right: 0;
-
+.container ul li.left:after,
+.container ul li.left:before {
+    border-left-color: #0187aa;
+    top: 10px;
+    right: -16px;
 }
-
-#next,
-#prev {
+.container ul li.left:after {
+    border-left-color: #fff;
+    right: -14px;
+}
+.container ul li span{
     position: absolute;
-    top: 0;
-    font-size: 32px;
-    top: 170px;
-    width: 22px;
-    height: 38px;
-    background-position: 0 0;
-    background-repeat: no-repeat;
+    display: block;
+    border-radius: 50%;
 }
-
-#next {
-    right: 0;
-    top: 270px;
+.container ul li span:nth-child(3n){
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    background: #0187aa;
+    z-index: 11;
 }
-
-#prev {
-    left: 0;
-    top: 270px;
+.container ul li span:nth-child(2n){
+    width: 18px;
+    height: 18px;
+    background: #fff;
+    z-index: 22;
 }
-
-#next.disabled,
-#prev.disabled {
-    opacity: 0.2;
+.container ul li.right span:nth-child(3n){
+    left: -47px;
+    top: -3px;
+}
+.container ul li.left span:nth-child(3n){
+    left: 382px;
+    top: -3px;
+}
+.container ul li.right span:nth-child(2n){
+    left: -41px;
+    top: 3px;
+}
+.container ul li.left span:nth-child(2n){
+    left: 388px;
+    top: 3px;
+}
+.container ul li b{
+    position: absolute;
+    display: block;
+    z-index: 33;
+    width: 180px;
+}
+.container ul li a{
+    color: #0fcae4;
+}
+.sen li.right b{
+    left: -228px;
+    top: 3px;
+}
+.szh li.right b{
+    left: -208px;
+}
+.container ul li.left b{
+    left: 445px;
+    top: 3px;
 }
