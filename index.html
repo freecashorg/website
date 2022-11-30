@@ -1,20 +1,712 @@
-<!DOCTYPE html>
-<html lang="en">
+﻿<!DOCTYPE html>
+<html>
 <head>
-    <meta charset="UTF-8">
-    <title>Freecash</title>
-    <link rel="stylesheet" type="text/css" href="static/css/common.css" />
-    <link rel="stylesheet" type="text/css" href="static/css/index.css" />
-	<link href="https://cdn.bootcss.com/animate.css/3.7.2/animate.css" rel="stylesheet">
-    <meta http-equiv="pragma" content="no-cache">
-    <meta http-equiv="Cache-Control" content="no-cache, must-revalidate">
-    <meta http-equiv="expires" content="0">
-    <meta name="keywords" content="" />
-    <meta name="description" content="" />
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta http-equiv="Expires" content="0">
+    <meta http-equiv="Pragma" content="no-cache">
+    <meta http-equiv="Cache-control" content="no-cache">
+    <meta http-equiv="Cache" content="no-cache">
+    <title>freecash</title>
+    <link type="text/css" href="js/layui/css/layui.css" rel="stylesheet">
+    <link rel="stylesheet" href="js/swiper/swiper-bundle.min.css"/>
+    <link type="text/css" href="css/index.css?v=0.665" rel="stylesheet">
 </head>
+
 <body>
-  <script>
-	window.location.href="en.html";
-  </script>
+<div class="layui-layout">
+    <div class="layui-header">
+        <div class="layui-container">
+            <div class="layui-row">
+                <div class="layui-col-md3 layui-header-logo"><img class="logo" src="images/logo.png"></div>
+                <div class="mobile-menu" onclick="showHideMenu()"></div>
+                <div class="mobile-menu-close" onclick="showHideMenu()"></div>
+                <div class="layui-col-md6 layui-header-nav">
+                    <ul class="layui-nav" id="menu">
+                        <li class="layui-nav-item"><a href="#Home">Home</a></li>
+                        <li class="layui-nav-item"><a href="#Vision">Vision</a></li>
+                        <li class="layui-nav-item"><a href="#Ecology">Ecosystem</a></li>
+                        <li class="layui-nav-item"><a href="#Roadmap">Roadmap</a></li>
+                    </ul>
+                </div>
+                <div class="layui-col-md3 layui-header-join">
+                    <a href="https://d-planet.io/fch" target="_blank" class="layui-btn layui-btn-radius layui-btn-join">Join us</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="layui-container layui-index-content">
+        <div class="layui-body-freedom" id="Home">
+            <!--<a href="https://twitter.com/freecashp" target="_blank" class="layui-btn layui-btn-message">
+                <i>📢</i>  fch第11期贡献评估通知：本期贡献已结束<i class="layui-icon">&#xe602;</i>
+            </a>-->
+            <h2>Freecash for Freedom</h2>
+            <div class="content">
+                <div>Free means being open, permissionless, and decentralized</div>
+                <div>Freecash is about supporting a new, free society </div>
+                <div>underpinned by the Free Consensus</div>
+            </div>
+            <div class="btn-div">
+                <a class="layui-btn layui-btn-primary" href="pdf/freecash.pdf" target="_blank">FREECASH</a>
+                <a class="layui-btn layui-btn-primary" href="pdf/freecash2.pdf" target="_blank">FREECONSENSUS</a>
+            </div>
+        </div>
+        <div class="layui-body-cryptoIdentity" id="Vision">
+            <div class="layui-row">
+                <div class="layui-col-md5">
+                    <div class="layui-body-info">
+                        <span class="layui-badge-rim">Vision</span>
+                        <h2>Crypto Identity</h2>
+                        <ul class="list">
+                            <li>Free permissionless and permanent registration.</li>
+                            <li>No pre-reserved CIDs, just real DIDs.</li>
+                            <li>Large name space with anti-duplicate and anti-squatting properties.</li>
+                            <li>Secure and permissionless CID infrastructure for any application.</li>
+                        </ul>
+                        <div class="btn-div">
+                            <a href="https://bbs.cash/topic/537/feip3v4_cid-en-us" target="_blank" type="button" class="layui-btn layui-btn-normal layui-btn-sm">FEIP3_CID</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="layui-col-md7 cryptoIdentity-right">
+                    <div class="list clearfix">
+                        <div class="item"><img src="images/image-36.png"><span>No Fees</span></div>
+                        <div class="item"><img src="images/image-37.png"><span>No Reservations</span></div>
+                        <div class="item"><img src="images/image-38.png"><span>No Licensing</span></div>
+                        <div class="item"><img src="images/image-39.png"><span>No Expiration</span></div>
+                        <div class="item"><img src="images/image-40.png"><span>No Privileged-access</span></div>
+                        <div class="item"><img src="images/img-01.png"><span>Real DID</span></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="layui-body-reputation">
+            <div class="layui-row">
+                <div class="layui-col-md6 layui-reputation-right">
+                    <div class="layui-body-info">
+                        <span class="layui-badge-rim">Vision</span>
+                        <h2>On-Chain Reputation</h2>
+                        <div class="con">Based on coin days.<br>Permanent, immutable, and transparent. </div>
+                        <ul class="list">
+                            <li>UTXO supports immutable currency units and timestamping.</li>
+                            <li>Coin days are calculated by the amount of currency multiplied by holding time, providing a credible source of trust.</li>
+                            <li>Coin days destroyed (CDD) is an effective indicator of on-chain activity and reputation.</li>
+                        </ul>
+                        <div class="btn-div">
+                            <a href="https://bbs.cash/topic/559/feip16v1_reputation-en-us" target="_blank" class="layui-btn layui-btn-normal layui-btn-sm">FEIP16_Reputation</a>
+                            <a href="https://bbs.cash/topic/557/fipa4_coindays-zh-cn" target="_blank" class="layui-btn layui-btn-normal layui-btn-sm">FIPA4_CoinDays </a>
+                        </div>
+                    </div>
+
+                </div>
+                <div class="layui-col-md6 layui-reputation-left">
+                    <img src="images/svg/img-02.svg">
+                </div>
+            </div>
+        </div>
+        <div class="layui-body-sociaty">
+            <div class="layui-body-info">
+                <span class="layui-badge-rim">Vision</span>
+                <h2>Free & Open Society</h2>
+                <div class="con">Lossless encrypted contacts.<br>
+                    Open and well-organized on-chain social events.<br>
+                    Transparent and accessible public archives.</div>
+            </div>
+            <div class="layui-sociaty-list">
+                <ul class="clearfix">
+                    <li>
+                        <div class="img"><img src="images/svg/img-05.svg"></div>
+                        <h3>On-chain Organization</h3>
+                        <div class="content">
+                            Information regarding social organizing is made public and on-chain, reducing the interfering power of non-personal entities on individual freedoms.
+                        </div>
+                        <div class="btn-div">
+                            <a href="https://bbs.cash/topic/620/feip28v2_organization-zh-cn" target="_blank" class="layui-btn layui-btn-normal layui-btn-sm">FEIP28_Organization </a>
+                            <a href="https://bbs.cash/topic/561/feip19v3_group-en-us" target="_blank" class="layui-btn layui-btn-normal layui-btn-sm">FEIP19_Group</a>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="img"><img src="images/svg/img-03.svg"></div>
+                        <h3>On-chain Contacts</h3>
+                        <div class="content">
+                            Social information is also on-chain, further reducing the interfering power of non-personal entities on individual freedoms.
+                        </div>
+                        <div class="btn-div">
+                            <a href="https://bbs.cash/topic/575/feip12v3_contacts-en-us" target="_blank" class="layui-btn layui-btn-normal layui-btn-sm">FEIP12_Contacts</a>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="img"><img src="images/svg/img-04.svg"></div>
+                        <h3>transparent Public Archives</h3>
+                        <div class="content">
+                            Public information is used to build social archives and reduce the capacity for social control due to identity switching and exploits.
+                        </div>
+                        <div class="btn-div">
+                            <a href="https://d-planet.io/" target="_blank" class="layui-btn layui-btn-normal layui-btn-sm">D-PLANET</a>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div class="layui-body-reputation">
+            <div class="layui-row">
+                <div class="layui-col-md6 layui-reputation-right">
+                    <div class="layui-body-info">
+                        <span class="layui-badge-rim">Vision</span>
+                        <h2>Web3 Infrastructure</h2>
+                        <div class="con">Building a decentralized web3 based on the Free Consensus.</div>
+                        <ul class="list">
+                            <li>Reconstructing decentralized Internet infrastructure based on free and permissionless social organizing protocols.</li>
+                            <li>Includes decentralized protocols, services, applications, code, storage, networks and other systems.</li>
+                            <li>Interoperable with BTC, ETH, IPFS, BSC, USDT, and other crypto ecosystems to spearhead global economic integration.</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="layui-col-md6 layui-reputation-left">
+                    <img src="images/svg/img-10.svg">
+                </div>
+            </div>
+        </div>
+        <div class="layui-body-support">
+            <div class="layui-body-info layui-body-infoall">
+                <span class="layui-badge-rim">Vision</span>
+                <h2>Ultra-reliable Tech</h2>
+                <ul class="list">
+                    <li>PoW eliminates social risks such as malicious collusion and snowballing.</li>
+                    <li>UTXO creates a secure and standardized metric of trust.</li>
+                    <li>BTC and BCH code has been proven to withstand innumerous attacks.</li>
+                </ul>
+            </div>
+            <div class="layui-support-list">
+                <ul class="clearfix">
+                    <li>
+                        <div class="img"><img src="images/svg/img-02.svg"></div>
+                        <div class="info">
+                            <h3>Schnorr Algorithm</h3>
+                            <div class="con">All transactions are signed with the Schnorr algorithm.</div>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="img"><img src="images/svg/img-07.svg"></div>
+                        <div class="info">
+                            <h3>1 MB Block Size</h3>
+                            <div class="con">Same as BTC.</div>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="img"><img src="images/svg/img-09.svg"></div>
+                        <div class="info">
+                            <h3>Proof of Work</h3>
+                            <div class="con">Simple and effective security.</div>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="img"><img src="images/svg/img-11.svg"></div>
+                        <div class="info">
+                            <h3>SHA-256</h3>
+                            <div class="con">Supports types of BTC miners.</div>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="img"><img src="images/svg/img-12.svg"></div>
+                        <div class="info">
+                            <h3>1 Minute Block Intervals</h3>
+                            <div class="con">10x the speed and capacity of BTC</div>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="img"><img src="images/svg/img-13.svg"></div>
+                        <div class="info">
+                            <h3>Reorganizing Protection</h3>
+                            <div class="con">No reorganization after 30 blocks.</div>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div class="layui-body-reputation layui-body-section">
+            <div class="layui-row-flex">
+                <div class="layui-col-flex">
+                    <div class="layui-body-info">
+                        <span class="layui-badge-rim">Vision</span>
+                        <h2>Born for DAOs and the Metaverse</h2>
+                        <ul class="list">
+                            <li>Free Consensus is not a DAO, but infrastructure for DAOs.</li>
+                            <li>The Freecash community is the first DAO to deploy successfully on Free Consensus.</li>
+                            <li>Free consensus supports decentralized social organizing for DAOs.</li>
+                            <li>Our goal is to provide tools to build the digital world into a metaverse of thousands of DAOs.</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="">
+                    <!--<img src="images/img-17.png">-->
+                    <img src="images/svg/img-17.svg" class="layui-body-reputation-img" >
+                </div>
+            </div>
+        </div>
+        <div class="layui-body-ecoProject layui-body-section" id="Ecology">
+            <div class="layui-body-info">
+                <h2>Freecash Ecosystem</h2>
+                <div class="con">DAPPs that believe in shared open identity, security, and reputation.</div>
+            </div>
+            <div class="layui-sociaty-list layui-ecoProject-list">
+                <ul class="clearfix">
+                    <li>
+                        <div class="img"><img src="images/project-01.png"></div>
+                        <h3>D-planet</h3>
+                        <div class="content">Data & Governance services.</div>
+                        <span class="layui-bg-gray">Dao</span>
+                        <div class="btn-div">
+                            <a href="https://dplanet.io/" target="_blank" class="layui-btn layui-btn-sm">Web</a>
+                            <button type="button" class="layui-btn layui-btn-plain layui-btn-sm" onclick="showDia(1)">Details</button>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="img"><img src="images/project-06.png"></div>
+                        <h3>CryptoCircle</h3>
+                        <div class="content">A comprehensive platform for online private key and identity management.</div>
+                        <span class="layui-bg-gray">Dao</span>
+                        <span class="layui-bg-gray">SOCIAL</span>
+                        <div class="btn-div">
+                            <a href="https://capp.cash/miquan/" target="_blank" class="layui-btn layui-btn-sm">Web</a>
+                            <button type="button" class="layui-btn layui-btn-plain layui-btn-sm" onclick="showDia(2)">Details</button>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="img"><img src="images/project-03.png"></div>
+                        <h3>FreeSign</h3>
+                        <div class="content">A comprehensive platform for online private key and identity management.</div>
+                        <span class="layui-bg-gray">DID</span>
+                        <div class="btn-div">
+                            <button type="button" class="layui-btn layui-btn-sm">Web</button>
+                            <button type="button" class="layui-btn layui-btn-plain layui-btn-sm" onclick="showDia(3)">Details</button>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="img"><img src="images/project-04.png"></div>
+                        <h3>CryptoSign</h3>
+                        <div class="content">Offline private key storage and signature tool.</div>
+                        <span class="layui-bg-gray">DID</span>
+                        <div class="btn-div">
+                            <button type="button" class="layui-btn layui-btn-sm">Web</button>
+                            <button type="button" class="layui-btn layui-btn-plain layui-btn-sm" onclick="showDia(4)">Details</button>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="img"><img src="images/project-04.png"></div>
+                        <h3>Sign.cash</h3>
+                        <div class="content">Website FCH and cryptographic tool platform.</div>
+                        <span class="layui-bg-gray">Tool</span>
+                        <div class="btn-div">
+                            <a href="https://www.sign.cash/" target="_blank" class="layui-btn layui-btn-sm">Web</a>
+                            <button type="button" class="layui-btn layui-btn-plain layui-btn-sm" onclick="showDia(5)">Details</button>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="img"><img src="images/project-05.png"></div>
+                        <h3>Scan & Scan</h3>
+                        <div class="content">Continuous QR code scanning and creation tool.</div>
+                        <span class="layui-bg-gray">Tool</span>
+                        <div class="btn-div">
+                            <button type="button" class="layui-btn layui-btn-sm">Web</button>
+                            <button type="button" class="layui-btn layui-btn-plain layui-btn-sm" onclick="showDia(6)">Details</button>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="img"><img src="images/project-04.png"></div>
+                        <h3>CryptoBackup</h3>
+                        <div class="content">Private information offline printing backup device.</div>
+                        <span class="layui-bg-gray">Hardware</span>
+                        <div class="btn-div">
+                            <a href="https://dplanet.io/" target="_blank" class="layui-btn layui-btn-sm">Web</a>
+                            <button type="button" class="layui-btn layui-btn-plain layui-btn-sm" onclick="showDia(7)">Details</button>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="img"><img src="images/project-04.png"></div>
+                        <h3>CID.cash</h3>
+                        <div class="content">A personalized homepage for people in the free information society.</div>
+                        <span class="layui-bg-gray">PORTAL</span>
+                        <div class="btn-div">
+                            <a href="https://cid.cash/" target="_blank" class="layui-btn layui-btn-sm">Web</a>
+                            <button type="button" class="layui-btn layui-btn-plain layui-btn-sm" onclick="showDia(8)">Details</button>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+
+        </div>
+        <div class="layui-body-rodamap layui-body-section" id="Roadmap">
+            <div class="layui-body-info">
+                <h2>Freecash Roadmap</h2>
+                <div class="con">The decentralized web3 based on Free Consensus.</div>
+            </div>
+            <div class="swiper mySwiper">
+                <div class="swiper-wrapper" id="roadMapContent">
+
+                </div>
+                <div class="swiper-button-prev"></div>
+                <div class="swiper-button-next"></div>
+            </div>
+        </div>
+        <div class="layui-body-joinUs layui-body-section">
+            <div class="layui-row-flex layui-flex-center">
+                <div class="layui-col-flex">
+                    <h2>Join the community and change the world.</h2>
+                </div>
+                <!--<div class="con">Lorem ipsum dolor sit am consectetur adipiscing varius enim in eros.</div>-->
+                <a href="https://d-planet.io/fch" target="_blank" class="layui-btn layui-btn-radius layui-btn-join">Join us</a>
+            </div>
+        </div>
+    </div>
+
+    <div class="layui-footer">
+        <div class="layui-container">
+            <div class="layui-footer-info clearfix">
+                <div class="layui-footer-info01">
+                    <div class="logo"><img class="w100" src="images/logo.png"></div>
+                    <div class="tit">Join the movement</div>
+                    <div>
+                        <span class="footer-info01-icon footer-icon01"><a href="https://github.com/freecashorg/freecash" target="_blank"></a></span>
+                        <span class="footer-info01-icon footer-icon02"><a href="https://twitter.com/freecashp" target="_blank"></a></span>
+                        <!--<span class="footer-info01-icon footer-icon03"><a href="" target="_blank"></a></span>-->
+                        <span class="footer-info01-icon footer-icon04"><a href="https://www.facebook.com/profile.php?id=100087232754539" target="_blank"></a></span>
+                        <span class="footer-info01-icon footer-icon05"><a href="https://t.me/freecashpublisher" target="_blank"></a></span>
+                        <span class="footer-info01-icon footer-icon06"><a href="https://www.reddit.com/r/community_fch/" target="_blank"></a></span>
+                        <!--<span class="footer-info01-icon footer-icon07"><a href="javascript:;" target="_blank"></a></span>-->
+                        <span class="footer-info01-icon footer-icon09"><a href="https://bbs.cash/" target="_blank"></a></span>
+                    </div>
+                </div>
+                <div class="layui-footer-info02">
+                    <div class="item">
+                        <div class="tit">Exchange</div>
+                        <div>
+                            <a href="https://coinex.com/" target="_blank">Coinex</a>
+                        </div>
+                    </div>
+                    <div class="item">
+                        <div class="tit">Explorer</div>
+                        <div>
+                            <a href="https://freecash.info/" target="_blank">Freecash.info</a>
+                            <a href="https://explorer.viawallet.com/fch/" target="_blank">ViaWallet Explorer</a>
+                        </div>
+                    </div>
+                    <div class="item">
+                        <div class="tit">Mining Pools</div>
+                        <div>
+                            <a href="https://zpool.ca/" target="_blank">zpool.ca</a>
+                            <a href="https://zergpool.com/" target="_blank">zergpool.com</a>
+                            <a href="https://www.mining-dutch.nl/" target="_blank">mining-dutch.nl </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="layui-footer-info03">
+                    <div class="item">
+                        <div class="tit">Portal</div>
+                        <div>
+                            <a href="https://freecash.org/" target="_blank">Freecash.org</a>
+                            <a href="http://freecash.cc/" target="_blank">Freecash.cc</a>
+                            <a href="https://freecash.vip/" target="_blank">Freecash.vip</a>
+                        </div>
+                    </div>
+                    <div class="item">
+                        <div class="tit">Tools</div>
+                        <div>
+                            <a href="https://www.sign.cash/" target="_blank">sign.cash</a>
+                            <a href="http://write.cash/" target="_blank">write.cash</a>
+                            <a href="https://bbs.cash/" target="_blank">BBS.cash</a>
+                            <a href="https://freecash.vip/diff.aspx" target="_blank">freecash.vip_hash-history</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="layui-footer-info04">
+                    <div class="item">
+                        <div class="tit">Fullnode Download</div>
+                        <div>
+                            <a href="https://github.com/freecashorg/freecash/releases" class="download-icon icon-mac" target="_blank">Mac</a>
+                            <a href="https://github.com/freecashorg/freecash/releases" class="download-icon icon-window" target="_blank">Windows</a>
+                            <a href="https://github.com/freecashorg/freecash/releases" class="download-icon icon-linux" target="_blank">Linux(docker)</a>
+                        </div>
+                    </div>
+                    <div class="tit">Subscribe to our newsletter</div>
+                    <!--<div class="con">Lorem ipsum dolor sit am consectetur adipiscing</div>-->
+                    <form class="layui-form" lay-filter="subscribeEmail">
+                        <div class="layui-form-item">
+                            <div class="">
+                                <input type="email" name="title" id="email" required lay-reqtext="Input your email address" lay-verify="email" placeholder="Enter your email" autocomplete="off" class="layui-input">
+                            </div>
+                        </div>
+                        <div class="layui-form-item">
+                            <div class="">
+                                <button type="button" class="layui-btn layui-btn-sub" lay-submit lay-filter="subscribeEmail">Subscribe</button>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+            <div class="layui-footer-b">
+                <span>Copyright © 2022&nbsp;&nbsp;— Created by</span>
+                <a href="https://d-planet.io/user/facjas_NC7N" target="_blank">facjas_NC7N</a>
+                <a  href="https://d-planet.io/user/HHQ_8iM4" target="_blank">HHQ_8iM4</a>
+                <a  href="https://d-planet.io/user/Makaba_3mZZ" target="_blank">Makaba_3mZZ</a>
+                <a href="https://d-planet.io/user/N_B485" target="_blank">N_B485</a>
+                <a  href="https://d-planet.io/user/zeng_SuQP" target="_blank">zeng_SuQP</a>
+                <p><br></p>
+                <a href="https://d-planet.io/project/136" target="_blank">Project Archives</a>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- D-Planet -->
+<div id="projectDetails1" class="projectDetails">
+    <div class="info">
+        <div class="img"><img src="images/project-icon01.png"></div>
+        <div class="info-r">
+            <h3>D-planet</h3>
+            <span class="layui-bg-gray">DAO</span>
+        </div>
+    </div>
+    <div class="tit">Data service & Governance Service</div>
+    <div class="con">Provide FCH data visualization service to help promote. Provide governance services such as contribution record and contribution evaluation, and accounting services such as contribution reward distribution.</div>
+    <div class="headList clearfix">
+        <a href="https://d-planet.io/user/facjas_NC7N" hit="<h1>facjas_NC7N</h1>FLQcFxnD3Jb8mj5FFAVCC7wLK7AMN9NC7N" target="_blank"><img src="https://zhimidaxue.com/file/get/getByAddress/FLQcFxnD3Jb8mj5FFAVCC7wLK7AMN9NC7N"><span>facjas_NC7N</span></a>
+        <a href="https://d-planet.io/user/zeng_SuQP" class="hit" hit="<h1>zeng_SuQP</h1>FN5Q5xchybpJFy4BY4BhSvXHgYxp9qSuQP" target="_blank"><img src="https://zhimidaxue.com/file/get/getByAddress/FN5Q5xchybpJFy4BY4BhSvXHgYxp9qSuQP"><span>zeng_SuQP</span></a>
+        <a href="https://d-planet.io/user/N_B485" class="hit" hit="<h1>N_B485</h1>F7rjKJSX5236VbZgzfa1e3eG1E3aRSB485" target="_blank"><img src="https://zhimidaxue.com/file/get/getByAddress/F7rjKJSX5236VbZgzfa1e3eG1E3aRSB485"><span>N_B485</span></a>
+        <a href="https://d-planet.io/user/HHQ_8iM4" class="hit" hit="<h1>HHQ_8iM4</h1>FHbcD4nsJwncGytZLw6Z5SWAVJFJA88iM4" target="_blank"><img src="https://zhimidaxue.com/file/get/getByAddress/FHbcD4nsJwncGytZLw6Z5SWAVJFJA88iM4"><span>HHQ_8iM4</span></a>
+    </div>
+    <div class="link-r"><a href="https://d-planet.io" target="_blank">Official Website →</a></div>
+</div>
+<!-- CryptoCircle -->
+<div id="projectDetails2" class="projectDetails">
+    <div class="info">
+        <div class="img"><img src="images/project-icon06.png"></div>
+        <div class="info-r">
+            <h3>CryptoCircle</h3>
+            <span class="layui-bg-gray">DAO</span>
+            <span class="layui-bg-gray">social</span>
+        </div>
+    </div>
+    <div class="tit">A comprehensive platform for online private key and identity management.</div>
+    <div class="con">Private key storage and backup, identity information display, FCH sending and receiving, offline signature, hash calculation, signature verification, encryption and decryption, on-chain information acquisition, code scanning, etc.</div>
+    <div class="headList clearfix">
+        <a href="https://d-planet.io/user/N_B485" class="hit" hit="<h1>N_B485</h1>F7rjKJSX5236VbZgzfa1e3eG1E3aRSB485" target="_blank"><img src="https://zhimidaxue.com/file/get/getByAddress/F7rjKJSX5236VbZgzfa1e3eG1E3aRSB485"><span>N_B485</span></a>
+        <a href="https://d-planet.io/user/zeng_SuQP" class="hit" hit="<h1>zeng_SuQP</h1>FN5Q5xchybpJFy4BY4BhSvXHgYxp9qSuQP" target="_blank"><img src="https://zhimidaxue.com/file/get/getByAddress/FN5Q5xchybpJFy4BY4BhSvXHgYxp9qSuQP"><span>zeng_SuQP</span></a>
+        <a href="https://d-planet.io/user/陈大旋_WMxy" class="hit" hit="<h1>陈大旋_WMxy</h1>FCG5Cubfr3uHzfKt8E1EvLebfPEfrFWMxy" target="_blank"><img src="https://zhimidaxue.com/file/get/getByAddress/FCG5Cubfr3uHzfKt8E1EvLebfPEfrFWMxy"><span>陈大旋_WMxy</span></a>
+        <a href="https://d-planet.io/user/HHQ_8iM4" class="hit" hit="<h1>HHQ_8iM4</h1>FHbcD4nsJwncGytZLw6Z5SWAVJFJA88iM4" target="_blank"><img src="https://zhimidaxue.com/file/get/getByAddress/FHbcD4nsJwncGytZLw6Z5SWAVJFJA88iM4"><span>HHQ_8iM4</span></a>
+    </div>
+    <div class="link-r"><a href="https://capp.cash/miquan/" target="_blank">Official Website →</a></div>
+</div>
+<!-- FreeSign -->
+<div id="projectDetails3" class="projectDetails">
+    <div class="info">
+        <div class="img"><img src="images/project-icon03.png"></div>
+        <div class="info-r">
+            <h3>FreeSign</h3>
+            <span class="layui-bg-gray">DID</span>
+        </div>
+    </div>
+    <div class="tit">A comprehensive platform for online private key and identity management.</div>
+    <div class="content-tit">
+        <div class="con">Private key storage and backup, identity information display, FCH sending and receiving, offline signature, hash calculation, signature verification, encryption and decryption, on-chain information acquisition, code scanning, etc.</div>
+        <div class="headList clearfix">
+            <a href="https://d-planet.io/user/N_B485" class="hit" hit="<h1>N_B485</h1>F7rjKJSX5236VbZgzfa1e3eG1E3aRSB485" target="_blank"><img src="https://zhimidaxue.com/file/get/getByAddress/F7rjKJSX5236VbZgzfa1e3eG1E3aRSB485"><span>N_B485</span></a>
+            <a href="https://d-planet.io/user/speak_wmmw" class="hit" hit="<h1>speak_wmmw</h1>FC6hGnRNGSCzcWCF7gwGgLPbeurpuKwmmw" target="_blank"><img src="https://zhimidaxue.com/file/get/getByAddress/FC6hGnRNGSCzcWCF7gwGgLPbeurpuKwmmw"><span>speak_wmmw</span></a>
+            <a href="https://d-planet.io/user/sirius_8zqD" class="hit" hit="<h1>sirius_8zqD</h1>FKiFgvVuUQktaSZk2jHrqrioaqwnfk8zqD" target="_blank"><img src="https://zhimidaxue.com/file/get/getByAddress/FKiFgvVuUQktaSZk2jHrqrioaqwnfk8zqD"><span>sirius_8zqD</span></a>
+            <a href="https://d-planet.io/user/Bining_q7ab" class="hit" hit="<h1>Bining_q7ab</h1>FGBYivqzm2u8Kop6cNNfzpPUew6e4Sq7ab" target="_blank"><img src="https://zhimidaxue.com/file/get/getByAddress/FGBYivqzm2u8Kop6cNNfzpPUew6e4Sq7ab"><span>Bining_q7ab</span></a>
+            <a href="https://d-planet.io/user/HHQ_8iM4" class="hit" hit="<h1>HHQ_8iM4</h1>FHbcD4nsJwncGytZLw6Z5SWAVJFJA88iM4" target="_blank"><img src="https://zhimidaxue.com/file/get/getByAddress/FHbcD4nsJwncGytZLw6Z5SWAVJFJA88iM4"><span>HHQ_8iM4</span></a>
+            <a href="https://d-planet.io/user/Makaba_3mZZ" class="hit" hit="<h1>Makaba_3mZZ</h1>F8bpsJtNwTvDZuYxjrYhYrtHZx356y3mZZ" target="_blank"><img src="https://zhimidaxue.com/file/get/getByAddress/F8bpsJtNwTvDZuYxjrYhYrtHZx356y3mZZ"><span>Makaba_3mZZ</span></a>
+        </div>
+    </div>
+    <div class="link-r"><a href="https://freecash.org/" target="_blank">Official Website →</a></div>
+</div>
+<!-- CryptoSign -->
+<div id="projectDetails4" class="projectDetails">
+    <div class="info">
+        <div class="img"><img src="images/project-icon04.png"></div>
+        <div class="info-r">
+            <h3>CryptoSign</h3>
+            <span class="layui-bg-gray">DID</span>
+        </div>
+    </div>
+    <div class="tit">Offline private key storage and signature tool.</div>
+    <div class="con">Secret language generation private key, private key import, private key management, offline transaction signature, encryption and decryption, signature verification, etc.</div>
+    <div class="headList clearfix">
+        <a href="https://d-planet.io/user/N_B485" class="hit" hit="<h1>N_B485</h1>F7rjKJSX5236VbZgzfa1e3eG1E3aRSB485" target="_blank"><img src="https://zhimidaxue.com/file/get/getByAddress/F7rjKJSX5236VbZgzfa1e3eG1E3aRSB485"><span>N_B485</span></a>
+        <a href="https://d-planet.io/user/speak_wmmw" class="hit" hit="<h1>speak_wmmw</h1>FC6hGnRNGSCzcWCF7gwGgLPbeurpuKwmmw" target="_blank"><img src="https://zhimidaxue.com/file/get/getByAddress/FC6hGnRNGSCzcWCF7gwGgLPbeurpuKwmmw"><span>speak_wmmw</span></a>
+        <a href="https://d-planet.io/user/sirius_8zqD" class="hit" hit="<h1>sirius_8zqD</h1>FKiFgvVuUQktaSZk2jHrqrioaqwnfk8zqD" target="_blank"><img src="https://zhimidaxue.com/file/get/getByAddress/FKiFgvVuUQktaSZk2jHrqrioaqwnfk8zqD"><span>sirius_8zqD</span></a>
+        <a href="https://d-planet.io/user/HHQ_8iM4" class="hit" hit="<h1>HHQ_8iM4</h1>FHbcD4nsJwncGytZLw6Z5SWAVJFJA88iM4" target="_blank"><img src="https://zhimidaxue.com/file/get/getByAddress/FHbcD4nsJwncGytZLw6Z5SWAVJFJA88iM4"><span>HHQ_8iM4</span></a>
+        <a href="https://d-planet.io/user/Makaba_3mZZ" class="hit" hit="<h1>Makaba_3mZZ</h1>F8bpsJtNwTvDZuYxjrYhYrtHZx356y3mZZ" target="_blank"><img src="https://zhimidaxue.com/file/get/getByAddress/F8bpsJtNwTvDZuYxjrYhYrtHZx356y3mZZ"><span>Makaba_3mZZ</span></a>
+    </div>
+    <div class="link-r"><a href="https://freecash.org/" target="_blank">Official Website →</a></div>
+</div>
+<!-- Sign.Cash -->
+<div id="projectDetails5" class="projectDetails">
+    <div class="info">
+        <div class="img"><img src="images/project-icon04.png"></div>
+        <div class="info-r">
+            <h3>Sign.Cash</h3>
+            <span class="layui-bg-gray">TOOL</span>
+        </div>
+    </div>
+    <div class="tit">Web-side FCH and cryptographic tool platform.</div>
+    <div class="con">Organize offline transaction data, transaction decoding and broadcasting, secret words to generate private keys, address conversion, hash calculation, signature verification, etc.</div>
+    <div class="headList clearfix">
+        <a href="https://d-planet.io/user/N_B485" class="hit" hit="<h1>N_B485</h1>F7rjKJSX5236VbZgzfa1e3eG1E3aRSB485" target="_blank"><img src="https://zhimidaxue.com/file/get/getByAddress/F7rjKJSX5236VbZgzfa1e3eG1E3aRSB485"><span>N_B485</span></a>
+        <a href="https://d-planet.io/user/speak_wmmw" class="hit" hit="<h1>speak_wmmw</h1>FC6hGnRNGSCzcWCF7gwGgLPbeurpuKwmmw" target="_blank"><img src="https://zhimidaxue.com/file/get/getByAddress/FC6hGnRNGSCzcWCF7gwGgLPbeurpuKwmmw"><span>speak_wmmw</span></a>
+        <a href="https://d-planet.io/user/sirius_8zqD" class="hit" hit="<h1>sirius_8zqD</h1>FKiFgvVuUQktaSZk2jHrqrioaqwnfk8zqD" target="_blank"><img src="https://zhimidaxue.com/file/get/getByAddress/FKiFgvVuUQktaSZk2jHrqrioaqwnfk8zqD"><span>sirius_8zqD</span></a>
+    </div>
+    <div class="link-r"><a href="https://www.sign.cash/" target="_blank">Official Website →</a></div>
+</div>
+<!-- Scan & Scan -->
+<div id="projectDetails6" class="projectDetails">
+    <div class="info">
+        <div class="img"><img src="images/project-icon05.png"></div>
+        <div class="info-r">
+            <h3>Scan & Scan</h3>
+            <span class="layui-bg-gray">TOOL</span>
+        </div>
+    </div>
+    <div class="tit">QR code continuous scanning and making tool.</div>
+    <div class="con">Scan QR codes, continuously scan multiple QR codes to splicing, make QR codes, split the text to make multiple QR codes that can be spliced, and realize secure communication between offline devices and online devices.</div>
+    <div class="headList clearfix">
+        <a href="https://d-planet.io/user/N_B485" class="hit" hit="<h1>N_B485</h1>F7rjKJSX5236VbZgzfa1e3eG1E3aRSB485" target="_blank"><img src="https://zhimidaxue.com/file/get/getByAddress/F7rjKJSX5236VbZgzfa1e3eG1E3aRSB485"><span>N_B485</span></a>
+        <a href="https://d-planet.io/user/speak_wmmw" class="hit" hit="<h1>speak_wmmw</h1>FC6hGnRNGSCzcWCF7gwGgLPbeurpuKwmmw" target="_blank"><img src="https://zhimidaxue.com/file/get/getByAddress/FC6hGnRNGSCzcWCF7gwGgLPbeurpuKwmmw"><span>speak_wmmw</span></a>
+        <a href="https://d-planet.io/user/sirius_8zqD" class="hit" hit="<h1>sirius_8zqD</h1>FKiFgvVuUQktaSZk2jHrqrioaqwnfk8zqD" target="_blank"><img src="https://zhimidaxue.com/file/get/getByAddress/FKiFgvVuUQktaSZk2jHrqrioaqwnfk8zqD"><span>sirius_8zqD</span></a>
+        <a href="https://d-planet.io/user/HHQ_8iM4" class="hit" hit="<h1>HHQ_8iM4</h1>FHbcD4nsJwncGytZLw6Z5SWAVJFJA88iM4" target="_blank"><img src="https://zhimidaxue.com/file/get/getByAddress/FHbcD4nsJwncGytZLw6Z5SWAVJFJA88iM4"><span>HHQ_8iM4</span></a>
+        <a href="https://d-planet.io/user/Makaba_3mZZ" class="hit" hit="<h1>Makaba_3mZZ</h1>F8bpsJtNwTvDZuYxjrYhYrtHZx356y3mZZ" target="_blank"><img src="https://zhimidaxue.com/file/get/getByAddress/F8bpsJtNwTvDZuYxjrYhYrtHZx356y3mZZ"><span>Makaba_3mZZ</span></a>
+    </div>
+    <div class="link-r"><a href="https://freecash.org/" target="_blank">Official Website →</a></div>
+</div>
+<!-- CryptoBackup -->
+<div id="projectDetails7" class="projectDetails">
+    <div class="info">
+        <div class="img"><img src="images/project-icon04.png"></div>
+        <div class="info-r">
+            <h3>CryptoBackup</h3>
+            <span class="layui-bg-gray">HARDWARE</span>
+        </div>
+    </div>
+    <div class="tit">Private information offline printing backup device.</div>
+    <div class="con">Scan the QR code, identify, and print the content QR code and text on long-term thermal paper for storage. It is mainly used for private information such as private keys and mnemonics that need to be stored offline.</div>
+    <div class="headList clearfix">
+        <a href="https://d-planet.io/user/N_B485" class="hit" hit="<h1>N_B485</h1>F7rjKJSX5236VbZgzfa1e3eG1E3aRSB485" target="_blank"><img src="https://zhimidaxue.com/file/get/getByAddress/F7rjKJSX5236VbZgzfa1e3eG1E3aRSB485"><span>N_B485</span></a>
+        <a href="https://d-planet.io/user/HHQ_8iM4" class="hit" hit="<h1>HHQ_8iM4</h1>FHbcD4nsJwncGytZLw6Z5SWAVJFJA88iM4" target="_blank"><img src="https://zhimidaxue.com/file/get/getByAddress/FHbcD4nsJwncGytZLw6Z5SWAVJFJA88iM4"><span>HHQ_8iM4</span></a>
+    </div>
+    <div class="link-r"><a href="https://freecash.org/" target="_blank">Official Website →</a></div>
+</div>
+<!-- Cid.Cash -->
+<div id="projectDetails8" class="projectDetails">
+    <div class="info">
+        <div class="img"><img src="images/project-icon04.png"></div>
+        <div class="info-r">
+            <h3>CID.cash</h3>
+            <span class="layui-bg-gray">PORTAL</span>
+        </div>
+    </div>
+    <div class="tit">A personalized homepage for people in the free information society.</div>
+    <div class="con">Display important on-chain information of CIDs, provide search functions,and provide personalized on-chain information services for logged-in CIDs.</div>
+    <div class="headList clearfix">
+        <a href="https://d-planet.io/user/N_B485" class="hit" hit="<h1>N_B485</h1>F7rjKJSX5236VbZgzfa1e3eG1E3aRSB485" target="_blank"><img src="https://zhimidaxue.com/file/get/getByAddress/F7rjKJSX5236VbZgzfa1e3eG1E3aRSB485"><span>N_B485</span></a>
+        <a href="https://d-planet.io/user/zeng_SuQP" class="hit" hit="<h1>zeng_SuQP</h1>FN5Q5xchybpJFy4BY4BhSvXHgYxp9qSuQP" target="_blank"><img src="https://zhimidaxue.com/file/get/getByAddress/FN5Q5xchybpJFy4BY4BhSvXHgYxp9qSuQP"><span>zeng_SuQP</span></a>
+        <a href="https://d-planet.io/user/陈大旋_WMxy" class="hit" hit="<h1>陈大旋_WMxy</h1>FCG5Cubfr3uHzfKt8E1EvLebfPEfrFWMxy" target="_blank"><img src="https://zhimidaxue.com/file/get/getByAddress/FCG5Cubfr3uHzfKt8E1EvLebfPEfrFWMxy"><span>陈大旋_WMxy</span></a>
+        <a href="https://d-planet.io/user/HHQ_8iM4" class="hit" hit="<h1>HHQ_8iM4</h1>FHbcD4nsJwncGytZLw6Z5SWAVJFJA88iM4" target="_blank"><img src="https://zhimidaxue.com/file/get/getByAddress/FHbcD4nsJwncGytZLw6Z5SWAVJFJA88iM4"><span>HHQ_8iM4</span></a>
+    </div>
+    <div class="link-r"><a href="https://cid.cash/" target="_blank">Official Website →</a></div>
+</div>
+<script type="text/javascript" src="js/layui/layui.js"></script>
+<script src="js/swiper/swiper-bundle.min.js"></script>
+<script>
+    var roadMapJSON=[
+        {"time":"2009","title":"Bitcoin launched","list":["First crypto-consensus system was born."]},
+        {"time":"2019","title":"Freecash whitepaper published","list":["Freecash testnet launched","Freecash.org launched","Freecash.info launched","Sign.cash launched"]},
+        {"time":"Q1 2020","title":"Freecash launched at 2020-01-01 00:00:00","list":["Viabtc Mining Pool listed FCH","Coinex exchange listed FCH","Freecash mainnet updated to 1.0.5","CID protocol deployed"]},
+        {"time":"Q2 2020","title":"D-planet 1.0 beta launched","list":["Freecash.vip launched","BBS.cash launched","Coin days reputation system launched"]},
+        {"time":"Q3 2020","title":"Free Consensus Whitepaper published","list":["Crypto Sign 1.0 launched","Contribution Assessment System launched"]},
+        {"time":"Q4 2020","title":"Freecash 2020 Annual Report published","list":["First governance fund distribution initiated","CID homepage project commenced"]},
+        {"time":"Q1 2021","title":"Upgrade, OP_ RETURN expanded to 4k","list":["Governance committee completed transition","Coin days rewards event launched"]},
+        {"time":"Q2 2021","title":"CryptoCircle 1.0 launched","list":["FreeSign test version launched","Write.ash test version launched"]},
+        {"time":"Q3 2021","title":"Difficulty bomb attack thwarted","list":["Freecash.cc launched"]},
+        {"time":"Q4 2021","title":"APIP5V1_Protocol Information published","list":["APIP6V1_Service Information published","APIP7V1_CAPP Information published","Web3 protocol framework established"]},
+        {"time":"Q1 2022","title":"APIP9V1_Group Info published","list":["APIP10V1_Organization Info published","APIP11V1_Hat On Chain published","Support the open society protocol established"]},
+        {"time":"Q2 2022","title":"Private Backup Machine Project commenced","list":["12 protocols of Open API published"]},
+        {"time":"Q3 2022","title":"API database development project commenced","list":["FreeSign 2.0 development commenced"]},
+        {"time":"Q4 2022","title":"Freecash.org 2.0 online","list":["D-planet.io 2.0 online and commenced financing","Open API middle ware beta launch"]},
+        {"time":"2023","title":"FreeSign 2.0 application online","list":["Private backup devices on sale","Identity management application launch","Open social application online","Free consensus development contest held"]}
+    ];
+    function showDia(v){
+        layui.use('jquery', function(){
+            layer.open({
+                type: 1,
+                title:false,
+                closeBtn:false,
+                shadeClose:true,
+                scrollbar:false,
+                content: layui.$('#projectDetails'+v)
+            });
+        })
+    }
+    function showHideMenu(){
+        layui.$('.mobile-menu').toggle();
+        layui.$('.mobile-menu-close').toggle();
+        layui.$('.layui-header-nav').toggle();
+        layui.$('.layui-header-join').toggle();
+    }
+    layui.use([],function(){
+        var $=layui.$;
+        var html='';
+        $.each(roadMapJSON,function(ind,val){
+            //html+='<div class="swiper-slide"><div><h3>'+val.time+'</h3><h4>'+val.title+'</h4><div class="info">';
+            html+='<div class="swiper-slide"><div><h3>'+val.time+'</h3><div class="info"><p>'+val.title+'</p>';
+            $.each(val.list,function(ind2,val2){
+                html+='<p>'+val2+'</p>';
+            });
+            html+='</div></div></div>';
+        });
+        $("#roadMapContent").html(html);
+        var swiper = new Swiper(".mySwiper", {
+            slidesPerView: window.screen.width<=992?1:3,
+            initialSlide:window.screen.width<=992?0:1,
+            centeredSlides: true,
+            spaceBetween: 0,
+            navigation: {
+                nextEl: '.swiper-button-next',
+                prevEl: '.swiper-button-prev',
+            },
+        });
+        if($(".mobile-menu").is(":visible")){
+            $("#menu a").click(function(){
+                if($('.mobile-menu-close').is(":visible")){
+                    showHideMenu();
+                }
+            });
+        }
+        $(document).delegate(".hit","mouseenter",function(){
+            var _self=$(this);
+            var tips=layer.tips(_self.attr("hit"),_self,{tips:[3,'#ffffff'],time:0,area:["auto","auto"]});
+            _self.attr("layerId",tips);
+        }).delegate(".hit","mouseleave",function(){
+            layer.close($(this).attr("layerId"));
+        });
+        layui.form.on('submit(subscribeEmail)',function(data){
+            layer.load(1,{shade: [0.3,'#000']});
+            $.ajax({
+                type: "post",
+                url: "https://dplanet.io/api/messageLeavePo/add",
+                data: {email:data.field.title},
+                dataType: "json",
+                success: function (result) {
+                    if(result.success){
+                        $("#email").val("");
+                        layer.msg("Success",{skin:"layui-layer-dialog",icon:1});
+                    }else{
+                        layer.msg("Failed",{skin:"layui-layer-dialog",icon:1});
+                    }
+                    layer.closeAll("loading");
+                }
+            });
+        });
+    });
+</script>
 </body>
 </html>
